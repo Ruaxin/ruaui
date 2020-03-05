@@ -1,9 +1,9 @@
 # 狗头人 Vue UI 组件
-
+[![Build Status](https://www.travis-ci.org/Ruaxin/ruaui.svg?branch=master)](https://www.travis-ci.org/Ruaxin/ruaui)
 ## 介绍
 
 这是我在学习 Vue 过程中做的一个 UI 框架，希望对你有用。
-## 安装
+
 ## 开始使用
 
 1. 添加 CSS 样式
@@ -30,9 +30,22 @@
   IE 15 及以上浏览器都支持此样式。
 
 2. 安装 
-
+  ```
+  npm i --save goutouren-2020
+  ```
 3. 引入 
- 
+   ```
+   import {Button, ButtonGroup, Icon} from 'frank-test-1-1'
+   import 'frank-test-1-1/dist/index.css'
+   export default {
+     name: 'app',
+     components: {
+       'g-button': Button,
+       'g-icon': Icon
+     }
+   }
+   ```
+   
 ## 文档
 
 ## 提问

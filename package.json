@@ -2,8 +2,9 @@
   "name": "goutouren-2020",
   "version": "0.0.1",
   "description": "一个自制UI框架",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "start": "parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
   },
