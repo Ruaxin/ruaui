@@ -17,8 +17,10 @@
 import Icon from './icon'
 
 export default {
-  comments: { Icon },
   name: 'GtrInput',
+  components: {
+    'g-icon': Icon
+  },
   props: {
     value: {
       type: String

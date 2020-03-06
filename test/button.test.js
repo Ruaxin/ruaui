@@ -19,7 +19,6 @@ describe('Button', () => {
       }
     }).$mount()
     const useElement = vm.$el.querySelector('use')
-    console.log(vm.$el)
     expect(useElement.getAttribute('xlink:href')).to.equal('#i-setting')
     vm.$destroy()
   })
