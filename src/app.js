@@ -27,6 +27,7 @@ Vue.component('g-footer', Footer)
 Vue.component('g-toast', Toast)
 Vue.use(plugin)
 
+
 new Vue({
   el: '#app',
   data: {
@@ -35,9 +36,13 @@ new Vue({
     loading3: false,
     message: 'hi'
   },
+  created () {
+    this.$toast('文字', {
+      enableHtml: false
+    })
+  },
   methods: {
     showToast () {
-      this.$toast('我是message')
     }
   }
 })
