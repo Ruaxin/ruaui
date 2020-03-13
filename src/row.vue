@@ -11,22 +11,22 @@ export default {
     gutter: {
       type: [Number, String]
     },
-    align:{
-      type:String,
-      validator(value){
-        return ['left','right','center'].includes(value)
+    align: {
+      type: String,
+      validator (value) {
+        return ['left', 'right', 'center'].indexOf(value) >= 0
       }
     }
   },
-  computed:{
-    rowStyle(){
-      let {gutter} = this
-      return{
-        marginLeft:-gutter/2+'px',marginRight:-gutter/2+'px'
+  computed: {
+    rowStyle () {
+      let { gutter } = this
+      return {
+        marginLeft: -gutter / 2 + 'px', marginRight: -gutter / 2 + 'px'
       }
     },
-    rowClass(){
-      let {align} = this
+    rowClass () {
+      let { align } = this
       return [align && `align-${align}`]
     }
   },
@@ -42,13 +42,16 @@ export default {
   .row {
     display: flex;
     flex-wrap: wrap;
-    &.align-left{
+
+    &.align-left {
       justify-content: flex-start;
     }
-    &.align-right{
+
+    &.align-right {
       justify-content: flex-end;
     }
-    &.align-center{
+
+    &.align-center {
       justify-content: center;
     }
   }

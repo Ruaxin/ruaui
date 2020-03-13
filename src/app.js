@@ -38,7 +38,16 @@ new Vue({
   },
   created () {
     this.$toast('文字', {
-      enableHtml: false
+      position: 'top',
+      enableHtml: false,
+      closeButton: {
+        text: 'OK',
+        callback () {
+          console.log('好了')
+        }
+      },
+      autoClose: false,
+      autoCloseDelay: 3
     })
   },
   methods: {
