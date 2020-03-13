@@ -37,21 +37,22 @@ new Vue({
     message: 'hi'
   },
   created () {
-    this.$toast('文字', {
-      position: 'top',
-      enableHtml: false,
-      closeButton: {
-        text: 'OK',
-        callback () {
-          console.log('好了')
-        }
-      },
-      autoClose: false,
-      autoCloseDelay: 3
-    })
+
   },
   methods: {
     showToast () {
+      this.$toast(`你的D100是${parseInt(Math.random() * 100)}`, {
+        position: 'top',
+        enableHtml: false,
+        closeButton: {
+          text: '骰',
+          callback () {
+            console.log('好了')
+          }
+        },
+        autoClose: false,
+        autoCloseDelay: 3
+      })
     }
   }
 })
