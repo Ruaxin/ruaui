@@ -40,9 +40,18 @@ new Vue({
 
   },
   methods: {
-    showToast () {
+    showToast1 () {
+      this.showToast('top')
+    },
+    showToast2 () {
+      this.showToast('middle')
+    },
+    showToast3 () {
+      this.showToast('bottom')
+    },
+    showToast (position) {
       this.$toast(`你的D100是${parseInt(Math.random() * 100)}`, {
-        position: 'top',
+        position,
         enableHtml: false,
         closeButton: {
           text: '骰',
