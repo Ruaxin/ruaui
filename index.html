@@ -34,9 +34,34 @@
 </head>
 <body>
 <div id="app">
-  <button @click="showToast1">top</button>
-  <button @click="showToast2">middle</button>
-  <button @click="showToast3">bottom</button>
+  <g-tabs :selected.sync="selectedTab">
+    <g-tabs-head>
+      <template slot="actions">
+        <button>设置</button>
+      </template>
+      <g-tabs-item name="dog">
+        <g-icon name="setting"></g-icon>
+        机核王鱼奎恩
+      </g-tabs-item>
+      <g-tabs-item name="bear" disabled>
+        苏州消防栓
+      </g-tabs-item>
+      <g-tabs-item name="duck">
+        义乌首富
+      </g-tabs-item>
+    </g-tabs-head>
+    <g-tabs-body>
+      <g-tabs-pane name="dog">
+        狗头人资讯
+      </g-tabs-pane>
+      <g-tabs-pane name="bear" d>
+        天哥资讯
+      </g-tabs-pane>
+      <g-tabs-pane name="duck">
+        爽哥资讯
+      </g-tabs-pane>
+    </g-tabs-body>
+  </g-tabs>
 </div>
 <script src="./src/app.js"></script>
 </body>
