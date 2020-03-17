@@ -80,26 +80,26 @@ export default {
         return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
       }
     },
-    trigger:{
+    trigger: {
       type: String,
-      default:'click',
+      default: 'click',
       validator (value) {
-        return ['click','hover'].indexOf(value)>=0
+        return ['click', 'hover'].indexOf(value) >= 0
       }
     }
   },
-  computed:{
-    openEvent(){
-      if(this.trigger === 'click'){
+  computed: {
+    openEvent () {
+      if (this.trigger === 'click') {
         return 'click'
-      }else {
+      } else {
         return 'mouseenter'
       }
     },
-    closeEvent(){
-      if(this.trigger === 'click'){
+    closeEvent () {
+      if (this.trigger === 'click') {
         return 'click'
-      }else {
+      } else {
         return 'mouseleave'
       }
     },
@@ -110,11 +110,11 @@ export default {
     }
   },
   mounted () {
-    if(this.trigger === 'click'){
-      this.$refs.popover.addEventListener('click',this.onClick)
-    }else {
-      this.$refs.popover.addEventListener('mouseenter',this.open)
-      this.$refs.popover.addEventListener('mouseleave',this.close)
+    if (this.trigger === 'click') {
+      this.$refs.popover.addEventListener('click', this.onClick)
+    } else {
+      this.$refs.popover.addEventListener('mouseenter', this.open)
+      this.$refs.popover.addEventListener('mouseleave', this.close)
     }
   },
   destroyed () {
@@ -166,11 +166,13 @@ export default {
 
       &::before {
         border-top-color: black;
+        border-bottom: none;
         top: 100%;
       }
 
       &::after {
         border-top-color: white;
+        border-bottom: none;
         top: calc(100% - 1px);
       }
     }
@@ -184,11 +186,13 @@ export default {
 
       &::before {
         border-bottom-color: black;
+        border-top: none;
         bottom: 100%;
       }
 
       &::after {
         border-bottom-color: white;
+        border-top: none;
         bottom: calc(100% - 1px);
       }
     }
@@ -204,11 +208,13 @@ export default {
 
       &::before {
         border-left-color: black;
+        border-right: none;
         left: 100%;
       }
 
       &::after {
         border-left-color: white;
+        border-right: none;
         left: calc(100% - 1px);
       }
     }
@@ -223,11 +229,13 @@ export default {
 
       &::before {
         border-right-color: black;
+        border-left: none;
         right: 100%;
       }
 
       &::after {
         border-right-color: white;
+        border-left: none;
         right: calc(100% - 1px);
       }
     }
