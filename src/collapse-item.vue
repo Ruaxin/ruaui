@@ -12,31 +12,25 @@
 <script>
 export default {
   name: 'GtrCollapseItem',
-  inject:['eventBus'],
+  inject: ['eventBus'],
   props: {
     title: {
       type: String,
       required: true
     },
-    name:{
-      type:String,
+    name: {
+      type: String,
       required: true
     }
   },
-  methods:{
-    toggle(){
-      if(this.open){
-        this.open = false
-      }else {
-        this.eventBus && this.eventBus.$emit('update:selected',this.name)
+  methods: {
+    toggle () {
+      if (this.open) {
+        this.eventBus && this.eventBus.$emit('update:removeSelected', this.name)
+      } else {
+        this.eventBus && this.eventBus.$emit('update:addSelected', this.name)
       }
     },
-    close(){
-      this.open = false
-    },
-    show(){
-      this.open = true
-    }
   },
   data () {
     return {
@@ -44,12 +38,8 @@ export default {
     }
   },
   mounted () {
-    this.eventBus && this.eventBus.$on('update:selected',(name)=>{
-      if(name !== this.name){
-        this.close()
-      }else {
-        this.show()
-      }
+    this.eventBus && this.eventBus.$on('update:selected', (names) => {
+      this.open = names.indexOf(this.name) >= 0
     })
   }
 }
