@@ -11,7 +11,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "repository": "git@github.com:Ruaxin/ruaui.git",
+  "repository": "git@github.com:Ruaxin/rua-ui.git",
   "author": "ruaxin <qy.xin@foxmail.com>",
   "license": "MIT",
   "dependencies": {

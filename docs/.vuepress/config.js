@@ -1,12 +1,11 @@
 module.exports = {
-  base:'/ruaui/',
+  base:'/rua-ui/',
   title: '狗头人UI',
   description: '一个好用的UI框架',
   themeConfig: {
     nav: [
       {text: '主页', link: '/'},
-      {text: '文档', link: '/guide/'},
-      {text: '交流', link: 'https://github.com/Ruaxin/ruaui'},
+      {text: 'GitHub', link: 'https://github.com/Ruaxin/rua-ui'},
     ],
     sidebar: [
       {
@@ -18,7 +17,15 @@ module.exports = {
       },
       {
         title: '组件',
-        children: ['/components/button']
+        children: [
+          '/components/button',
+          '/components/tabs',
+          '/components/input',
+          '/components/grid',
+          '/components/layout',
+          '/components/toast',
+          '/components/tabs',
+        ]
       },
 
     ]
