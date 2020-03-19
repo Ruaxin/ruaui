@@ -1,4 +1,5 @@
 module.exports = {
+  base:'/ruaui/',
   title: '狗头人UI',
   description: '一个好用的UI框架',
   themeConfig: {
