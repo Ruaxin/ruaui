@@ -1,6 +1,6 @@
 {
-  "name": "goutouren-2020",
-  "version": "0.0.1",
+  "name": "gouttr",
+  "version": "1.0.0",
   "description": "一个自制UI框架",
   "main": "dist/index.js",
   "scripts": {
