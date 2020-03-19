@@ -6,7 +6,10 @@
   "scripts": {
     "start": "parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
+    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
+    "build": "parcel build index.js --no-cache --no-minify",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": "git@github.com:Ruaxin/ruaui.git",
   "author": "ruaxin <qy.xin@foxmail.com>",
@@ -27,10 +30,12 @@
     "mocha": "^7.1.0",
     "node-sass": "^4.13.1",
     "parcel-bundler": "^1.12.4",
+    "sass-loader": "^8.0.2",
     "sinon": "^9.0.0",
     "sinon-chai": "^3.5.0",
     "vue-hot-reload-loader": "^0.2.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.4.0"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
