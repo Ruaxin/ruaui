@@ -10,9 +10,3 @@ export default {
   inject: ['eventBus'],
 }
 </script>
-
-<style lang="scss" scoped>
-  .tabs-body {
-
-  }
-</style>

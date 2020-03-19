@@ -1,5 +1,6 @@
 <template>
   <div style="padding-top: 16px;">
+    <h2>使用方法</h2>
     <p>
       <strong>hover预览</strong>
     </p>
