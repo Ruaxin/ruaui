@@ -22,9 +22,9 @@ export default {
       selected: '1',
       content: `
           <g-input></g-input>
-          <g-input value="中文"></g-input>
-          <g-input value="中文" disabled></g-input>
-          <g-input value="中文" readonly></g-input>
+          <g-input value="内容"></g-input>
+          <g-input value="内容" disabled></g-input>
+          <g-input value="内容" readonly></g-input>
       `.replace(/^ {8}/gm, '').trim()
     }
   }
